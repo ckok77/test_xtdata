@@ -31,20 +31,14 @@ uses
   System.SysUtils;
 
 function TCourseService.GetCourses: TArray<TCourse>;
-var
-  C1, C2: TCourse;
 begin
   SetLength(Result, 2);
 
-  C1 := TCourse.Create;
-  C1.Id := 1;
-  C1.Name := '基础课程';
-  Result[0] := C1;
+  Result[0].Id := 1;
+  Result[0].Name := '基础课程';
 
-  C2 := TCourse.Create;
-  C2.Id := 2;
-  C2.Name := '进阶课程';
-  Result[1] := C2;
+  Result[1].Id := 2;
+  Result[1].Name := '进阶课程';
 end;
 
 initialization
